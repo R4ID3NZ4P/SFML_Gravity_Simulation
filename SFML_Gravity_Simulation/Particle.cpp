@@ -32,8 +32,8 @@ void Particle::updatePhysics(GravitySource& s)
 
 	float inverse_squared_dropoff = inverse_distance * inverse_distance;
 
-	float acceleration_x = distance_x * s.getStrength() * inverse_squared_dropoff;
-	float acceleration_y = distance_y * s.getStrength() * inverse_squared_dropoff;
+	float acceleration_x = normalized_x * s.getStrength() * inverse_squared_dropoff;
+	float acceleration_y = normalized_y * s.getStrength() * inverse_squared_dropoff;
 
 	vel.x += acceleration_x;
 	vel.y += acceleration_y;

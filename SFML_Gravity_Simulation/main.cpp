@@ -1,8 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include "GravitySource.h"
+#include "Particle.h"
 
 int main() {
 	const unsigned int width = 1280;
 	const unsigned int height = 720;
+
+	GravitySource src(640, 360, 2000);
+	Particle p1(640, 200, 3, -1);
+
 
 	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode({ width, height }), "Gravity Simulation");
 	window->setFramerateLimit(60);
@@ -16,6 +22,11 @@ int main() {
 		}
 
 		window->clear();
+
+		p1.updatePhysics(src);
+
+		src.render(window);
+		p1.render(window);
 		
 		window->display();
 	}
