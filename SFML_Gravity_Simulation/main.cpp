@@ -16,7 +16,7 @@ int main() {
 		}
 
 		window->clear();
-		// Simulation update and rendering logic would go here
+		
 		window->display();
 	}
 
