@@ -1,6 +1,5 @@
 #pragma once
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/CircleShape.hpp>
+#include <SFML/Graphics.hpp>
 class GravitySource
 {
 	sf::CircleShape shape;
@@ -11,5 +10,6 @@ public:
 	GravitySource(float pos_x, float pos_y, float strength);
 	sf::Vector2f getPos();
 	float getStrength();
+	void render(sf::RenderWindow* window);
 };
 
