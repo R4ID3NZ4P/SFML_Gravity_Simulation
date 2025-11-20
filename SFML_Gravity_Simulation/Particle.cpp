@@ -7,7 +7,7 @@ Particle::Particle(float pos_x, float pos_y, float vel_x, float vel_y) {
 	vel.x = vel_x;
 	vel.y = vel_y;
 
-	shape.setRadius(10);
+	shape.setRadius(5);
 	shape.setPosition(pos);
 	shape.setFillColor(sf::Color::Red);
 }
@@ -40,4 +40,9 @@ void Particle::updatePhysics(GravitySource& s)
 
 	pos.x += vel.x;
 	pos.y += vel.y;
+}
+
+void Particle::setColor(sf::Color col)
+{
+	shape.setFillColor(col);
 }

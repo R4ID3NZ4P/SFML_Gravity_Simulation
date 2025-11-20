@@ -5,7 +5,7 @@ GravitySource::GravitySource(float pos_x, float pos_y, float strength) {
 	pos.y = pos_y;
 	this->strength = strength;
 
-	shape.setRadius(20);
+	shape.setRadius(10);
 	shape.setPosition(pos);
 	shape.setFillColor(sf::Color::White);
 }
